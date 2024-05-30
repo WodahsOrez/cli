@@ -1,0 +1,30 @@
+{
+  "name": "@wodahs-orez/cli",
+  "version": "0.0.1",
+  "description": "cli",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/index.js",
+    "publish": "npm publish --access public"
+  },
+  "bin": {
+    "wz": "src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WodahsOrez/cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "WodahsOrez",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/WodahsOrez/cli/issues"
+  },
+  "homepage": "https://github.com/WodahsOrez/cli#readme",
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
