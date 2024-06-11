@@ -2,14 +2,16 @@
   "name": "@wodahs-orez/cli",
   "version": "0.0.1",
   "description": "cli",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "node src/index.js",
+    "test": "node dist/index.js",
+    "build": "tsc",
+    "dev": "tsc -w",
     "publish": "npm publish --access public"
   },
   "bin": {
-    "wz": "src/index.js"
+    "wz": "dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,9 @@
   "homepage": "https://github.com/WodahsOrez/cli#readme",
   "dependencies": {
     "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "typescript": "^5.4.5"
   }
 }

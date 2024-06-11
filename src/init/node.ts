@@ -4,8 +4,8 @@ const globalConfig = {
   scope: "@wodahs-orez",
 };
 
-export function getBasePackageJson(opts) {
-  const packageJson = {
+export function getBasePackageJson(opts: { name: string; esModule: boolean }) {
+  const packageJson: AnyType = {
     name: (globalConfig.scope ? globalConfig.scope + "/" : "") + opts.name,
     version: "0.0.1",
     main: "src/index.js",
@@ -14,7 +14,7 @@ export function getBasePackageJson(opts) {
     license: "MIT",
   };
 
-  if(opts.esModule){
+  if (opts.esModule) {
     packageJson.type = "module";
   }
   return packageJson;

@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    // ! 必填项 开始
+    // 编译后文件的js版本
+    "target": "ESNext",
+    // 生成哪个模块系统的代码
+    "module": "ESNext",
+    // 指定编译时要引入的库，影响代码里能使用的全局变量和类型定义
+    "lib": [
+      "ESNext",
+      "DOM",
+    ],
+    // 编译时的模块解析策略
+    "moduleResolution": "Node",
+    // 编译后的输出目录
+    "outDir": "dist",
+    // ! 必填项 结束
+    // 严格模式，主要差别禁止隐式any等，影响写法的严谨程度
+    "strict": true,
+    // 生成sourceMap
+    "sourceMap": true,
+    // 生成d.ts文件
+    "declaration": true,
+    // 生成d.ts文件的输出目录
+    "declarationDir": "es",
+    // 生成d.ts文件的sourceMap，方便作为第三方依赖时跳转源码
+    "declarationMap": true,
+    // 启用后可以直接引入json文件，否则需要把json转成ts文件
+    "resolveJsonModule": true,
+    // ! TS5.0之后使用，导入导出用了type编译后的JS里都自动删除，不用则不删
+    "verbatimModuleSyntax": true,
+    // 兼容混用esm和cjs模块的情况
+    "esModuleInterop": true,
+  },
+  // 和files都不配置的话，默认是当前目录和子目录下的（.ts,.d.ts,.tsx文件）
+  "include": [
+    "src/**/*",
+    "types/**/*",
+  ],
+  // 排除测试文件等不需要编译的文件
+  "exclude": [
+    "src/**/__tests__/**",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
+  ]
+} 

@@ -8,7 +8,7 @@ const templateTypes = {
   ts: "ts",
 };
 
-async function writePackageJson(json) {
+async function writePackageJson(json: AnyType) {
   const writePath = path.resolve(process.cwd(), "package.json");
   console.log("写入路径", writePath);
   // 写入package.json文件
